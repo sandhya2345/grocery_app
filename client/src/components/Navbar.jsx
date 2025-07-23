@@ -20,7 +20,6 @@ const Navbar = () => {
             <img className='h-9' src={assets.logo } alt="logo" />
             </NavLink>
 
-
             {/* Desktop Menu */}
 
             <div className="hidden sm:flex items-center gap-8">
