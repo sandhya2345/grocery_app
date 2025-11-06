@@ -25,7 +25,7 @@ const Navbar = () => {
             <div className="hidden sm:flex items-center gap-8">
 
                 <NavLink to='/'>Home</NavLink>
-                <NavLink to='/'>All product</NavLink>
+                <NavLink to='/products'>All product</NavLink>
                 <NavLink to='/'>Contact</NavLink>
 
 
