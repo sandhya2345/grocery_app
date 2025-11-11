@@ -14,9 +14,10 @@ const Cart = () => {
 
     const [selectedAddress, setSelectedAddress] = useState(dummyAddress[0])
 
+
     const [paymentOption, setPaymemtOptions] = useState("COD")
 
-    
+
 
 
     const getCart = () => {
@@ -26,12 +27,12 @@ const Cart = () => {
             product.quantity = cartItems[key]
             tempArray.push(product)
         }
-       
+
         setCartArray(tempArray)
     }
 
 
-    const placeOrder = async ()=>{
+    const placeOrder = async () => {
 
     }
 
@@ -55,7 +56,7 @@ const Cart = () => {
 
                 <div className="grid grid-cols-[2fr_1fr_1fr] text-gray-500 text-base font-medium pb-3">
                     <p className="text-left">Product Details</p>
-                    <p className="text-center">Subtotal</p>
+                    <p className="text-center">Subtotals</p>
                     <p className="text-center">Action</p>
                 </div>
 
@@ -90,7 +91,7 @@ const Cart = () => {
                             <img src={assets.remove_icon} alt="remove"
                                 className="inline-block w-6 h-6" />
                         </button>
-                    </div>) 
+                    </div>)
                 )}
 
                 <button onClick={() => { navigate("/products"); scrollTo(0, 0) }} className="group cursor-pointer flex items-center mt-8 gap-2 text-primary font-medium">
@@ -116,9 +117,9 @@ const Cart = () => {
                         {showAddress && (
                             <div className="absolute top-12 py-1 bg-white border border-gray-300 text-sm w-full">
                                 {addresses.map((address, index) => (
-                                    <p onClick={() => {setSelectedAddress(address); setShowAddress(false)}}
+                                    <p onClick={() => { setSelectedAddress(address); setShowAddress(false) }}
                                         className="text-gray-500 p-2 hover:bg-gray-100">
-                                            {address.street}, {address.city},{address.state}, {address.country}
+                                        {address.street}, {address.city},{address.state}, {address.country}
                                     </p>
 
                                 ))}
@@ -147,11 +148,11 @@ const Cart = () => {
                         <span>Shipping Fee</span><span className="text-green-600">Free</span>
                     </p>
                     <p className="flex justify-between">
-                        <span>Tax (2%)</span><span>{currency}{getCartAmount() * 2  / 100}</span>
+                        <span>Tax (2%)</span><span>{currency}{getCartAmount() * 2 / 100}</span>
                     </p>
                     <p className="flex justify-between text-lg font-medium mt-3">
                         <span>Total Amount:</span><span>
-                            {currency}{getCartAmount() + getCartAmount() * 2  / 100}</span>
+                            {currency}{getCartAmount() + getCartAmount() * 2 / 100}</span>
                     </p>
                 </div>
 
