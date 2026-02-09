@@ -32,7 +32,7 @@ const AddAddress = () => {
         const { name, value } = e.target;
 
         setAddress((prevAddress) => ({
-            ...AddAddress,
+            ...prevAddress,
             [name]: value,
 
         }))
@@ -54,7 +54,7 @@ const AddAddress = () => {
                         <div className='grid grid-cols-2 gap-4'>
                             <InputField handleChange={handleChange} address={address}
                                 name='firstName' type="text" placeholder="First Name" />
-
+  
                             <InputField handleChange={handleChange} address={address}
                                 name='lastName' type="text" placeholder="Last Name" />
                         </div>
