@@ -34,6 +34,9 @@ const App = () => {
           <Route path='/cart' element={<Cart />} />
           <Route path='/add-address' element={<AddAddress />} />
            <Route path='/my-orders' element={<MyOrders />} />
+           <Route path='/seller' element> 
+
+           </Route>
         </Routes>
       </div>
       {!isSellerPath && <Footer />}
