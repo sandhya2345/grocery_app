@@ -6,10 +6,9 @@ const SellerLogin = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const onSubmitHandler =  async ()=>{
+    const onSubmitHandler = async () => {
         event.preventDefault();
         setIsSeller(true)
-
 
     }
 
@@ -26,25 +25,23 @@ const SellerLogin = () => {
                 <p><span className='text-primary'>Seller</span>Login</p>
                 <div className='w-full'>
                     <p>Email</p>
-                    <input type='email' placeholder='enter your email'
-                    className='border border-gray-200 rounded w-full p-2 mt-1 outline-primary'
-                    required/>
+                    <input onChange={(e) => setEmail(e.target.value)} value={email}
+                        type='email' placeholder='enter your email'
+                        className='border border-gray-200 rounded w-full p-2 mt-1 outline-primary'
+                        required />
                 </div>
 
-                 <div className='w-full'>
+                <div className='w-full'>
                     <p>Password</p>
-                    <input type='password' placeholder='enter your password'
-                    className='border border-gray-200 rounded w-full p-2 mt-1 outline-primary'
-                    required/>
+                    <input onChange={(e) => setPassword(e.target.value)} value={password}
+                        type='password' placeholder='enter your password'
+                        className='border border-gray-200 rounded w-full p-2 mt-1 outline-primary'
+                        required />
                 </div>
 
                 <button className='bg-primary text-white w-full py-2 rounded-md
                 cursor-pointer'>Login</button>
-
-
-
             </div>
-
 
         </form>
     )

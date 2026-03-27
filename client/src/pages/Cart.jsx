@@ -17,9 +17,6 @@ const Cart = () => {
 
     const [paymentOption, setPaymemtOptions] = useState("COD")
 
-
-
-
     const getCart = () => {
         let tempArray = []
         for (const key in cartItems) {
@@ -98,6 +95,10 @@ const Cart = () => {
                     <img className="group-hover:-translate-x-1 transition"
                         src={assets.arrow_right_icon_colored} alt="arrow" />
                     Continue Shopping
+                </button>
+
+                <button className="">
+
                 </button>
 
             </div>
